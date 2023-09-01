@@ -9,13 +9,10 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
         view.backgroundColor = .systemGray4
     }
-
-
 }
-

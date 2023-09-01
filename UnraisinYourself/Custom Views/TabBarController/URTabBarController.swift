@@ -19,7 +19,6 @@ class URTabBarController: UITabBarController {
         viewControllers = [createHomeNavController(), createSocialNavController(), createSettingsNavController()]
     }
     
-    
     // MARK: - Create Tab ViewControllers Functions
     
     func createHomeNavController() -> UINavigationController {
@@ -42,5 +41,4 @@ class URTabBarController: UITabBarController {
         settingsViewController.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gear"), tag: 2)
         return UINavigationController(rootViewController: settingsViewController)
     }
-
 }
