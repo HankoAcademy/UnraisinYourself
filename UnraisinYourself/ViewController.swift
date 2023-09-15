@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  UnraisinYourself
-//
-//  Created by Hannie Kim on 7/20/23.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -12,13 +5,48 @@ class ViewController: UIViewController {
     let drinkButton = UIButton()
     let defaultGoalLabel = UILabel()
     
+    let circularView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .lightGray
+        view.layer.cornerRadius = 25
+        view.clipsToBounds = true
+        return view
+    }()
+    
+    let userLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Hi Thierno"
+        label.font = .systemFont(ofSize: 22)
+        label.textColor = .black
+        return label
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
         view.backgroundColor = .systemBackground
+        
+        setUpHeader()
         setupLayout()
         configureDefaultGoalLabel()
         configureDrinkButton()
+    }
+    
+    func setUpHeader() {
+        view.addSubview(circularView)
+        view.addSubview(userLabel)
+        
+        NSLayoutConstraint.activate([
+            circularView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            circularView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            circularView.widthAnchor.constraint(equalToConstant: 50),
+            circularView.heightAnchor.constraint(equalToConstant: 50),
+            
+            userLabel.leadingAnchor.constraint(equalTo: circularView.trailingAnchor, constant: 10),
+            userLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20)
+        ])
     }
     
     private func setupLayout() {
@@ -29,7 +57,7 @@ class ViewController: UIViewController {
         drinkButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            defaultGoalLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 12),
+            defaultGoalLabel.topAnchor.constraint(equalTo: userLabel.bottomAnchor, constant: 12),
             defaultGoalLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             drinkButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
@@ -59,4 +87,3 @@ class ViewController: UIViewController {
     
     
 }
-
