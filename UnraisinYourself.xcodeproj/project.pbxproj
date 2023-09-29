@@ -89,7 +89,6 @@
 			children = (
 				F3784D242A69DACD00E4131C /* UnraisinYourself */,
 				F3784D232A69DACD00E4131C /* Products */,
-				F3FC8B5E2AC65BB70031F5E9 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,13 +108,6 @@
 				2C6964022A7C9227009F2ACA /* Resources */,
 			);
 			path = UnraisinYourself;
-			sourceTree = "<group>";
-		};
-		F3FC8B5E2AC65BB70031F5E9 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

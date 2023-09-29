@@ -34,7 +34,6 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .systemGray4
-//        view.backgroundColor = .systemBackground
         
         setUpHeader()
         setupLayout()
