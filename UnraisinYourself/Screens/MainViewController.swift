@@ -1,6 +1,13 @@
+//
+//  MainViewController.swift
+//  UnraisinYourself
+//
+//  Created by Hannie Kim on 7/20/23.
+//
+
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     let drinkButton = UIButton()
     let defaultGoalLabel = UILabel()
@@ -26,7 +33,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .systemGray4
         
         setUpHeader()
         setupLayout()
@@ -65,7 +72,6 @@ class ViewController: UIViewController {
             drinkButton.heightAnchor.constraint(equalToConstant: 50),
             drinkButton.widthAnchor.constraint(equalToConstant: 150)
         ])
-        
     }
     
     private func configureDefaultGoalLabel() {
@@ -84,6 +90,4 @@ class ViewController: UIViewController {
     @objc func drinkButtonTapped() {
         print("Added a drink")
     }
-    
-    
 }
