@@ -8,6 +8,12 @@
 import UIKit
 
 class MainViewController: UIViewController {
+
+    // MARK: - View Life Cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemGray4
     
     let drinkButton = UIButton()
     let defaultGoalLabel = UILabel()

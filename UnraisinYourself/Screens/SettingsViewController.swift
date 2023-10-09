@@ -18,5 +18,4 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemCyan
     }
-
 }
