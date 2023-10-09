@@ -18,7 +18,7 @@ class URTabBarController: UITabBarController {
         super.viewDidLoad()
         viewControllers = [createHomeNavController(), createSocialNavController(), createSettingsNavController()]
     }
-    
+
     // MARK: - Create Tab ViewControllers Functions
     
     func createHomeNavController() -> UINavigationController {

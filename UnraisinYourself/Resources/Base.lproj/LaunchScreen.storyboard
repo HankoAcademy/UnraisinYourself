@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="UnraisinYourself" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rR-vg-DjH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UnraisinYourself" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rR-vg-DjH">
                                 <rect key="frame" x="57" y="631" width="282" height="55"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
                                 <color key="textColor" systemColor="systemIndigoColor"/>
@@ -29,10 +29,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="0rR-vg-DjH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="H3D-Y5-cJt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0rR-vg-DjH" secondAttribute="bottom" constant="132" id="QYq-3g-F9f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0rR-vg-DjH" secondAttribute="trailing" constant="54" id="WwH-0a-io7"/>
                             <constraint firstItem="CdK-cH-Ft2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Yha-ws-N7L"/>
                             <constraint firstItem="CdK-cH-Ft2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dZM-gQ-hUH"/>
                             <constraint firstItem="0rR-vg-DjH" firstAttribute="top" secondItem="CdK-cH-Ft2" secondAttribute="bottom" constant="113" id="dk9-xw-RSl"/>
                             <constraint firstItem="CdK-cH-Ft2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="pjA-el-pPc"/>
+                            <constraint firstItem="0rR-vg-DjH" firstAttribute="top" secondItem="CdK-cH-Ft2" secondAttribute="bottom" constant="113" id="ufs-rF-aqV"/>
                         </constraints>
                     </view>
                 </viewController>
