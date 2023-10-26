@@ -10,7 +10,7 @@
 
 import UIKit
 
-class URTabBarController: UITabBarController {
+final class URTabBarController: UITabBarController {
 
     // MARK: - View Life Cycle
     
@@ -23,7 +23,7 @@ class URTabBarController: UITabBarController {
     // MARK: - Create Tab ViewControllers Functions
     
     func createHomeNavController() -> UINavigationController {
-        let homeViewController = MainViewController()
+        let homeViewController = MainViewController(viewModel: .init())
         homeViewController.title = "Home"
         homeViewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)
         return UINavigationController(rootViewController: homeViewController)

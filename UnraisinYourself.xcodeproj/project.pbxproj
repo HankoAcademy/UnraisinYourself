@@ -15,8 +15,14 @@
 		F3784D2A2A69DACD00E4131C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3784D292A69DACD00E4131C /* MainViewController.swift */; };
 		F3784D2F2A69DACE00E4131C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3784D2E2A69DACE00E4131C /* Assets.xcassets */; };
 		F3784D322A69DACE00E4131C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3784D302A69DACE00E4131C /* LaunchScreen.storyboard */; };
+		F3A01C532AEB2FEC00405DFC /* WelcomeViewController+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A01C522AEB2FEC00405DFC /* WelcomeViewController+ViewModel.swift */; };
 		F3E572F22AA1616F00F80E37 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = F3E572F12AA1616F00F80E37 /* FirebaseCrashlytics */; };
 		F3FC8B602AC65C2C0031F5E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3FC8B5F2AC65C2C0031F5E9 /* GoogleService-Info.plist */; };
+		F3FC8B642AD4DC9D0031F5E9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FC8B632AD4DC9D0031F5E9 /* WelcomeViewController.swift */; };
+		F3FC8B692AD4E0810031F5E9 /* View+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FC8B682AD4E0810031F5E9 /* View+AutoLayout.swift */; };
+		F3FC8B6B2AD4E1000031F5E9 /* UIStackView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FC8B6A2AD4E1000031F5E9 /* UIStackView+Ext.swift */; };
+		F3FC8B6E2AD8BFE90031F5E9 /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FC8B6D2AD8BFE90031F5E9 /* PaddedTextField.swift */; };
+		F3FC8B732AD8D1AF0031F5E9 /* MainViewController+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FC8B722AD8D1AF0031F5E9 /* MainViewController+ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +36,13 @@
 		F3784D2E2A69DACE00E4131C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3784D312A69DACE00E4131C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3784D332A69DACE00E4131C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3A01C522AEB2FEC00405DFC /* WelcomeViewController+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WelcomeViewController+ViewModel.swift"; sourceTree = "<group>"; };
 		F3FC8B5F2AC65C2C0031F5E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F3FC8B632AD4DC9D0031F5E9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		F3FC8B682AD4E0810031F5E9 /* View+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+AutoLayout.swift"; sourceTree = "<group>"; };
+		F3FC8B6A2AD4E1000031F5E9 /* UIStackView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Ext.swift"; sourceTree = "<group>"; };
+		F3FC8B6D2AD8BFE90031F5E9 /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
+		F3FC8B722AD8D1AF0031F5E9 /* MainViewController+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +89,8 @@
 		2C6964082A7C9316009F2ACA /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				F3784D292A69DACD00E4131C /* MainViewController.swift */,
+				F3FC8B6F2AD8D1730031F5E9 /* Home  */,
+				F3FC8B622AD4DB5F0031F5E9 /* Welcome Screen */,
 				2C6964092A7C933E009F2ACA /* SocialViewController.swift */,
 				2C69640B2A7C9346009F2ACA /* SettingsViewController.swift */,
 			);
@@ -103,11 +116,80 @@
 		F3784D242A69DACD00E4131C /* UnraisinYourself */ = {
 			isa = PBXGroup;
 			children = (
+				F3FC8B6C2AD8BFD40031F5E9 /* Views */,
 				2C6964082A7C9316009F2ACA /* Screens */,
 				2C6964042A7C9278009F2ACA /* Custom Views */,
+				F3FC8B672AD4E0620031F5E9 /* UI Extensions */,
 				2C6964022A7C9227009F2ACA /* Resources */,
 			);
 			path = UnraisinYourself;
+			sourceTree = "<group>";
+		};
+		F3FC8B622AD4DB5F0031F5E9 /* Welcome Screen */ = {
+			isa = PBXGroup;
+			children = (
+				F3FC8B662AD4DCB60031F5E9 /* View */,
+				F3FC8B652AD4DCB20031F5E9 /* ViewModel */,
+			);
+			path = "Welcome Screen";
+			sourceTree = "<group>";
+		};
+		F3FC8B652AD4DCB20031F5E9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F3A01C522AEB2FEC00405DFC /* WelcomeViewController+ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F3FC8B662AD4DCB60031F5E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F3FC8B632AD4DC9D0031F5E9 /* WelcomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F3FC8B672AD4E0620031F5E9 /* UI Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F3FC8B682AD4E0810031F5E9 /* View+AutoLayout.swift */,
+				F3FC8B6A2AD4E1000031F5E9 /* UIStackView+Ext.swift */,
+			);
+			path = "UI Extensions";
+			sourceTree = "<group>";
+		};
+		F3FC8B6C2AD8BFD40031F5E9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F3FC8B6D2AD8BFE90031F5E9 /* PaddedTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F3FC8B6F2AD8D1730031F5E9 /* Home  */ = {
+			isa = PBXGroup;
+			children = (
+				F3FC8B702AD8D17E0031F5E9 /* View */,
+				F3FC8B712AD8D1840031F5E9 /* ViewModel */,
+			);
+			path = "Home ";
+			sourceTree = "<group>";
+		};
+		F3FC8B702AD8D17E0031F5E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F3784D292A69DACD00E4131C /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F3FC8B712AD8D1840031F5E9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F3FC8B722AD8D1AF0031F5E9 /* MainViewController+ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,10 +294,16 @@
 			files = (
 				2C69640A2A7C933E009F2ACA /* SocialViewController.swift in Sources */,
 				F3784D2A2A69DACD00E4131C /* MainViewController.swift in Sources */,
+				F3A01C532AEB2FEC00405DFC /* WelcomeViewController+ViewModel.swift in Sources */,
 				F3784D262A69DACD00E4131C /* AppDelegate.swift in Sources */,
+				F3FC8B732AD8D1AF0031F5E9 /* MainViewController+ViewModel.swift in Sources */,
 				2C6964072A7C92AD009F2ACA /* URTabBarController.swift in Sources */,
 				F3784D282A69DACD00E4131C /* SceneDelegate.swift in Sources */,
+				F3FC8B692AD4E0810031F5E9 /* View+AutoLayout.swift in Sources */,
+				F3FC8B6B2AD4E1000031F5E9 /* UIStackView+Ext.swift in Sources */,
 				2C69640C2A7C9346009F2ACA /* SettingsViewController.swift in Sources */,
+				F3FC8B642AD4DC9D0031F5E9 /* WelcomeViewController.swift in Sources */,
+				F3FC8B6E2AD8BFE90031F5E9 /* PaddedTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

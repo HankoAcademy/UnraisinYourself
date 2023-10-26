@@ -7,7 +7,12 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
+    // MARK: - Private Properties
+    
+    private let viewModel: ViewModel
+   
+    // MARK: - Public Properties
     
     let drinkButton = UIButton()
     let defaultGoalLabel = UILabel()
@@ -24,12 +29,25 @@ class MainViewController: UIViewController {
     let userLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Hi Thierno"
         label.font = .systemFont(ofSize: 22)
         label.textColor = .black
         return label
     }()
+    
+    // MARK: - Initializer
 
+    init(viewModel: ViewModel) {
+        self.viewModel = viewModel
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,6 +60,8 @@ class MainViewController: UIViewController {
     }
     
     func setUpHeader() {
+        userLabel.text = viewModel.welcomeMessage
+        
         view.addSubview(circularView)
         view.addSubview(userLabel)
         
@@ -75,13 +95,13 @@ class MainViewController: UIViewController {
     }
     
     private func configureDefaultGoalLabel() {
-        defaultGoalLabel.text = "Goal: 1000mL to go"
+        defaultGoalLabel.text = viewModel.defaultGoalLabelText
         defaultGoalLabel.textAlignment = .center
         defaultGoalLabel.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
     }
     
     private func configureDrinkButton() {
-        drinkButton.setTitle("Add Drink", for: .normal)
+        drinkButton.setTitle(viewModel.drinkButtonText, for: .normal)
         drinkButton.backgroundColor = .systemTeal
         drinkButton.layer.cornerRadius = 12
         drinkButton.addTarget(self, action: #selector(drinkButtonTapped), for: .touchUpInside)
