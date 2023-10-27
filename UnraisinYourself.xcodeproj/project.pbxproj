@@ -16,6 +16,7 @@
 		F3784D2F2A69DACE00E4131C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3784D2E2A69DACE00E4131C /* Assets.xcassets */; };
 		F3784D322A69DACE00E4131C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3784D302A69DACE00E4131C /* LaunchScreen.storyboard */; };
 		F3A01C532AEB2FEC00405DFC /* WelcomeViewController+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A01C522AEB2FEC00405DFC /* WelcomeViewController+ViewModel.swift */; };
+		F3A01C592AEB391A00405DFC /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A01C582AEB391A00405DFC /* UserDefaultsKeys.swift */; };
 		F3E572F22AA1616F00F80E37 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = F3E572F12AA1616F00F80E37 /* FirebaseCrashlytics */; };
 		F3FC8B602AC65C2C0031F5E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3FC8B5F2AC65C2C0031F5E9 /* GoogleService-Info.plist */; };
 		F3FC8B642AD4DC9D0031F5E9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FC8B632AD4DC9D0031F5E9 /* WelcomeViewController.swift */; };
@@ -37,6 +38,7 @@
 		F3784D312A69DACE00E4131C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3784D332A69DACE00E4131C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3A01C522AEB2FEC00405DFC /* WelcomeViewController+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WelcomeViewController+ViewModel.swift"; sourceTree = "<group>"; };
+		F3A01C582AEB391A00405DFC /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 		F3FC8B5F2AC65C2C0031F5E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F3FC8B632AD4DC9D0031F5E9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		F3FC8B682AD4E0810031F5E9 /* View+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+AutoLayout.swift"; sourceTree = "<group>"; };
@@ -120,9 +122,18 @@
 				2C6964042A7C9278009F2ACA /* Custom Views */,
 				F3FC8B6C2AD8BFD40031F5E9 /* Reusable Views */,
 				F3FC8B672AD4E0620031F5E9 /* UI Extensions */,
+				F3A01C572AEB390100405DFC /* UserDefaults */,
 				2C6964022A7C9227009F2ACA /* Resources */,
 			);
 			path = UnraisinYourself;
+			sourceTree = "<group>";
+		};
+		F3A01C572AEB390100405DFC /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				F3A01C582AEB391A00405DFC /* UserDefaultsKeys.swift */,
+			);
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 		F3FC8B622AD4DB5F0031F5E9 /* Welcome Screen */ = {
@@ -294,6 +305,7 @@
 			files = (
 				2C69640A2A7C933E009F2ACA /* SocialViewController.swift in Sources */,
 				F3784D2A2A69DACD00E4131C /* MainViewController.swift in Sources */,
+				F3A01C592AEB391A00405DFC /* UserDefaultsKeys.swift in Sources */,
 				F3A01C532AEB2FEC00405DFC /* WelcomeViewController+ViewModel.swift in Sources */,
 				F3784D262A69DACD00E4131C /* AppDelegate.swift in Sources */,
 				F3FC8B732AD8D1AF0031F5E9 /* MainViewController+ViewModel.swift in Sources */,

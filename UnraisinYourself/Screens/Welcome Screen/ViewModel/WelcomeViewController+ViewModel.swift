@@ -13,10 +13,6 @@ extension WelcomeViewController {
         // MARK: - Properties
         
         private let userDefaults: UserDefaults
-       
-        private enum UserDefaultsKey: String {
-            case name = "name"
-        }
         
         var nameOfUser: String? {
             userDefaults.string(forKey: UserDefaultsKey.name.rawValue)
