@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.makeKeyAndVisible()
         
         let welcomeViewModel = WelcomeViewController.ViewModel()
-        if welcomeViewModel.hasSavedName {
+        if welcomeViewModel.hasSeenWelcomeScreen {
             let tabBarController = UINavigationController(rootViewController: URTabBarController())
             window?.rootViewController = tabBarController
         } else {

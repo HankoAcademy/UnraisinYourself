@@ -22,7 +22,7 @@ extension WelcomeViewController {
             userDefaults.string(forKey: UserDefaultsKey.name.rawValue)
         }
         
-        var hasSavedName: Bool {
+        var hasSeenWelcomeScreen: Bool {
             nameOfUser != nil
         }
         
@@ -34,12 +34,7 @@ extension WelcomeViewController {
         
         // MARK: - Methods
         
-        func saveName(_ name: String?) {
-            guard let name else {
-                print("User did not enter a name to save")
-                return
-            }
-            
+        func saveName(_ name: String) {
             userDefaults.set(name, forKey: UserDefaultsKey.name.rawValue)
         }
     }

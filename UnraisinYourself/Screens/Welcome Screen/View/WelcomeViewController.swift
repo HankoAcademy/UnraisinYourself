@@ -102,7 +102,7 @@ final class WelcomeViewController: UIViewController {
     // MARK: - Actions
     
     @objc func nextButtonTapped() {
-        viewModel.saveName(nameTextField.text)
+        viewModel.saveName(nameTextField.text ?? "")
         navigationController?.pushViewController(URTabBarController(), animated: true)
         navigationController?.viewControllers.removeAll(where: { $0.isKind(of: WelcomeViewController.self) })
     }
