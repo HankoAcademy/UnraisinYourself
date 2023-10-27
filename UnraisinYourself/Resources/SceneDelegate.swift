@@ -20,8 +20,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
-        window?.rootViewController = WelcomeViewController()
         
+        let welcomeViewModel = WelcomeViewController.ViewModel()
+        if welcomeViewModel.hasSavedName {
+            let tabBarController = UINavigationController(rootViewController: URTabBarController())
+            window?.rootViewController = tabBarController
+        } else {
+            let welcomeViewController = UINavigationController(rootViewController: WelcomeViewController(viewModel: welcomeViewModel))
+            window?.rootViewController = welcomeViewController
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

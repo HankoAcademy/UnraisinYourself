@@ -11,6 +11,8 @@ final class WelcomeViewController: UIViewController {
 
     // MARK: - Properties
     
+    private let viewModel: ViewModel
+    
     private let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -46,6 +48,15 @@ final class WelcomeViewController: UIViewController {
         button.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
         return button
     }()
+    
+    // MARK: - Initializer
+    
+    init(viewModel: ViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) { nil }
     
     // MARK: - Lifecycle
     
@@ -91,7 +102,9 @@ final class WelcomeViewController: UIViewController {
     // MARK: - Actions
     
     @objc func nextButtonTapped() {
+        viewModel.saveName(nameTextField.text)
         navigationController?.pushViewController(URTabBarController(), animated: true)
+        navigationController?.viewControllers.removeAll(where: { $0.isKind(of: WelcomeViewController.self) })
     }
 }
 
